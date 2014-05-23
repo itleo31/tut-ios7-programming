@@ -15,7 +15,6 @@
 @property (weak, nonatomic) IBOutlet UICollectionView *keywordCollectionView;
 @property (weak, nonatomic) IBOutlet UITextView *instructionTextView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *closeButton;
 
 @end
 
@@ -65,11 +64,6 @@
     
     NSArray* instructions = self.sandwich[@"instructions"];
     self.instructionTextView.text = [instructions componentsJoinedByString:@"\n\n"];
-}
-
-
-- (IBAction)closeButtonTapped:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 

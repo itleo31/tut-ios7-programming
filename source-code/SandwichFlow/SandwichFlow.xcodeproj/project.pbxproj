@@ -34,8 +34,8 @@
 		72E28E3D17B1A8E600EAD04E /* Sarnie.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E28E3C17B1A8E600EAD04E /* Sarnie.png */; };
 		72E28E3F17B1AB2A00EAD04E /* Sarnie@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72E28E3E17B1AB2A00EAD04E /* Sarnie@2x.png */; };
 		72EC195217A64A8B00D1716D /* Sandwiches.json in Resources */ = {isa = PBXBuildFile; fileRef = 72EC195117A64A8B00D1716D /* Sandwiches.json */; };
-		72EC195817AB952400D1716D /* SandwichesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72EC195717AB952400D1716D /* SandwichesViewController.m */; };
 		72F555F8179C323C00652B98 /* CollectionViewLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72F555F7179C323600652B98 /* CollectionViewLabelCell.m */; };
+		CF259C6E192FC13700DAABE6 /* DynamicSandwichViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF259C6D192FC13700DAABE6 /* DynamicSandwichViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,10 +81,10 @@
 		72E28E3C17B1A8E600EAD04E /* Sarnie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sarnie.png; sourceTree = "<group>"; };
 		72E28E3E17B1AB2A00EAD04E /* Sarnie@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sarnie@2x.png"; sourceTree = "<group>"; };
 		72EC195117A64A8B00D1716D /* Sandwiches.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Sandwiches.json; sourceTree = "<group>"; };
-		72EC195617AB952400D1716D /* SandwichesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SandwichesViewController.h; sourceTree = "<group>"; };
-		72EC195717AB952400D1716D /* SandwichesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SandwichesViewController.m; sourceTree = "<group>"; };
 		72F555F6179C323600652B98 /* CollectionViewLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewLabelCell.h; sourceTree = "<group>"; };
 		72F555F7179C323600652B98 /* CollectionViewLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLabelCell.m; sourceTree = "<group>"; };
+		CF259C6C192FC13700DAABE6 /* DynamicSandwichViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicSandwichViewController.h; sourceTree = "<group>"; };
+		CF259C6D192FC13700DAABE6 /* DynamicSandwichViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicSandwichViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,8 +174,8 @@
 				72F555F7179C323600652B98 /* CollectionViewLabelCell.m */,
 				72E28E3717B1A0F300EAD04E /* SandwichViewController.h */,
 				72E28E3817B1A0F300EAD04E /* SandwichViewController.m */,
-				72EC195617AB952400D1716D /* SandwichesViewController.h */,
-				72EC195717AB952400D1716D /* SandwichesViewController.m */,
+				CF259C6C192FC13700DAABE6 /* DynamicSandwichViewController.h */,
+				CF259C6D192FC13700DAABE6 /* DynamicSandwichViewController.m */,
 			);
 			path = SandwichFlow;
 			sourceTree = "<group>";
@@ -320,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72E28E3917B1A0F300EAD04E /* SandwichViewController.m in Sources */,
-				72EC195817AB952400D1716D /* SandwichesViewController.m in Sources */,
+				CF259C6E192FC13700DAABE6 /* DynamicSandwichViewController.m in Sources */,
 				72B7A9EC1795262100BB168C /* AppDelegate.m in Sources */,
 				72B7A9E81795262100BB168C /* main.m in Sources */,
 				72F555F8179C323C00652B98 /* CollectionViewLabelCell.m in Sources */,

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>632406B8-F587-4CAE-AC5B-457187EAF4E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SandwichFlow</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7F7F63C1-5C98-4E60-8F2D-596D4C2F510E</key>
+		<string>https://github.com/itleo31/tut-ios7-programming.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>source-code/SandwichFlow/SandwichFlow.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7F7F63C1-5C98-4E60-8F2D-596D4C2F510E</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/itleo31/tut-ios7-programming.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7F7F63C1-5C98-4E60-8F2D-596D4C2F510E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7F7F63C1-5C98-4E60-8F2D-596D4C2F510E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>tut-ios7</string>
+		</dict>
+	</array>
+</dict>
+</plist>

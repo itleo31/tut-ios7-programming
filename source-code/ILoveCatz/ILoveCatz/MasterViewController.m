@@ -10,12 +10,36 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "Cat.h"
+#import "BouncePresentAnimationController.h"
+#import "ShrinkDismissAnimationController.h"
 
 @interface MasterViewController ()
+
+@property (nonatomic, strong, readonly) BouncePresentAnimationController *bouncePresentAnimationController;
+@property (nonatomic, strong, readonly) ShrinkDismissAnimationController *shrinkDismissAnimationController;
 
 @end
 
 @implementation MasterViewController
+
+@synthesize bouncePresentAnimationController = _bouncePresentAnimationController;
+@synthesize shrinkDismissAnimationController = _shrinkDismissAnimationController;
+
+- (BouncePresentAnimationController *)bouncePresentAnimationController
+{
+    if (!_bouncePresentAnimationController) {
+        _bouncePresentAnimationController = [[BouncePresentAnimationController alloc] init];
+    }
+    return _bouncePresentAnimationController;
+}
+
+- (ShrinkDismissAnimationController *)shrinkDismissAnimationController
+{
+    if (!_shrinkDismissAnimationController) {
+        _shrinkDismissAnimationController = [[ShrinkDismissAnimationController alloc] init];
+    }
+    return _shrinkDismissAnimationController;
+}
 
 - (NSArray *)cats {
     return ((AppDelegate *)[[UIApplication sharedApplication] delegate]).cats;
@@ -28,7 +52,6 @@
     UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cat"]];
     self.navigationItem.titleView = imageView;
 }
-
 
 #pragma mark - Table View
 
@@ -60,7 +83,20 @@
         
         // provide this to the detail view
         [[segue destinationViewController] setCat:cat];
+    } else if ([[segue identifier] isEqualToString:@"ShowAbout"]) {
+        UIViewController *toVC = [segue destinationViewController];
+        toVC.transitioningDelegate = self;
     }
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return self.bouncePresentAnimationController;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return self.shrinkDismissAnimationController;
 }
 
 @end

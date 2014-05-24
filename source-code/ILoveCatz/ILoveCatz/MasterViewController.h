@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 
 
-@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@interface MasterViewController : UITableViewController <NSFetchedResultsControllerDelegate, UIViewControllerTransitioningDelegate>
 
 @end

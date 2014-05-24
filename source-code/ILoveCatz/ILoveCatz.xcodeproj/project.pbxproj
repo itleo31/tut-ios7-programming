@@ -36,6 +36,8 @@
 		72F4B06117C6A3B60029ADB9 /* VeryYoungKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */; };
 		72F4B06217C6A3B60029ADB9 /* YawningCat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */; };
 		72F4B06417C6A9370029ADB9 /* FluffyKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */; };
+		C252DAA919304DF600C1A78A /* BouncePresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C252DAA819304DF600C1A78A /* BouncePresentAnimationController.m */; };
+		C252DAAC193057D300C1A78A /* ShrinkDismissAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C252DAAB193057D300C1A78A /* ShrinkDismissAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,10 @@
 		72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = VeryYoungKitten.jpg; path = Assets/VeryYoungKitten.jpg; sourceTree = "<group>"; };
 		72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YawningCat.jpg; path = Assets/YawningCat.jpg; sourceTree = "<group>"; };
 		72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FluffyKitten.jpg; path = Assets/FluffyKitten.jpg; sourceTree = "<group>"; };
+		C252DAA719304DF600C1A78A /* BouncePresentAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimationController.h; sourceTree = "<group>"; };
+		C252DAA819304DF600C1A78A /* BouncePresentAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimationController.m; sourceTree = "<group>"; };
+		C252DAAA193057D300C1A78A /* ShrinkDismissAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShrinkDismissAnimationController.h; sourceTree = "<group>"; };
+		C252DAAB193057D300C1A78A /* ShrinkDismissAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShrinkDismissAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +167,10 @@
 				72A50CEF17C65D63009EF8D2 /* AboutViewController.m */,
 				72A50CF417C66EA6009EF8D2 /* Cat.h */,
 				72A50CF517C66EA6009EF8D2 /* Cat.m */,
+				C252DAA719304DF600C1A78A /* BouncePresentAnimationController.h */,
+				C252DAA819304DF600C1A78A /* BouncePresentAnimationController.m */,
+				C252DAAA193057D300C1A78A /* ShrinkDismissAnimationController.h */,
+				C252DAAB193057D300C1A78A /* ShrinkDismissAnimationController.m */,
 			);
 			path = ILoveCatz;
 			sourceTree = "<group>";
@@ -320,7 +330,9 @@
 			files = (
 				72A50CF617C66EA6009EF8D2 /* Cat.m in Sources */,
 				72A50CCF17C65A1A009EF8D2 /* DetailViewController.m in Sources */,
+				C252DAA919304DF600C1A78A /* BouncePresentAnimationController.m in Sources */,
 				72A50CF017C65D63009EF8D2 /* AboutViewController.m in Sources */,
+				C252DAAC193057D300C1A78A /* ShrinkDismissAnimationController.m in Sources */,
 				72A50CCC17C65A1A009EF8D2 /* MasterViewController.m in Sources */,
 				72A50CC317C65A1A009EF8D2 /* AppDelegate.m in Sources */,
 				72A50CBF17C65A1A009EF8D2 /* main.m in Sources */,

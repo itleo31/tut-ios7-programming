@@ -37,16 +37,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     
-    // Background image
+    // Background
     UIImageView *bgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background-LowerLayer.png"]];
+    bgView.frame = CGRectInset(self.view.bounds, -50.0f, -50.0f);
     [self.view addSubview:bgView];
+    [self addMotionEffectToView:bgView magnitude:50.0f];
     
-    // Header logo
+    UIImageView *bgMidView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Background-MidLayer.png"]];
+    [self.view addSubview:bgMidView];
+    
     UIImageView *headerView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Sarnie.png"]];
-    headerView.center = CGPointMake(220, 190);
+    headerView.center = CGPointMake(220.0f, 190.0f);
     [self.view addSubview:headerView];
+    [self addMotionEffectToView:headerView magnitude:-20.0f];
     
     // Behavior
     _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
@@ -63,6 +67,21 @@
     }
 }
 
+- (void)addMotionEffectToView:(UIView*)view magnitude:(CGFloat)magnitude
+{
+    UIInterpolatingMotionEffect *xMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.x" type:UIInterpolatingMotionEffectTypeTiltAlongHorizontalAxis];
+    xMotion.minimumRelativeValue = @(-magnitude);
+    xMotion.maximumRelativeValue = @(magnitude);
+    
+    UIInterpolatingMotionEffect *yMotion = [[UIInterpolatingMotionEffect alloc] initWithKeyPath:@"center.y" type:UIInterpolatingMotionEffectTypeTiltAlongVerticalAxis];
+    yMotion.minimumRelativeValue = @(-magnitude);
+    yMotion.maximumRelativeValue = @(magnitude);
+    
+    UIMotionEffectGroup *group = [[UIMotionEffectGroup alloc] init];
+    group.motionEffects = @[xMotion, yMotion];
+    
+    [view addMotionEffect:group];
+}
 
 - (void)didReceiveMemoryWarning
 {
@@ -156,10 +175,12 @@
 {
     BOOL viewHasReachedDockLocation = view.frame.origin.y < 100.0f;
     if (viewHasReachedDockLocation) {
-        _snap = [[UISnapBehavior alloc] initWithItem:view snapToPoint:self.view.center];
-        [_animator addBehavior:_snap];
-        [self setAlphaWhenViewDocked:view alpha:0.0];
-        _viewDocked = YES;
+        if (!_viewDocked) {
+            _snap = [[UISnapBehavior alloc] initWithItem:view snapToPoint:self.view.center];
+            [_animator addBehavior:_snap];
+            [self setAlphaWhenViewDocked:view alpha:0.0];
+            _viewDocked = YES;
+        }
     } else {
         if (_viewDocked) {
             [_animator removeBehavior:_snap];
@@ -201,6 +222,21 @@
     if ([@2 isEqual:identifier]) {
         UIView *view = (UIView*)item;
         [self tryDockView:view];
+    } else if ([@1 isEqual:identifier]) {
+        UIView *view = (UIView*)item;
+        
+        // How far did it fall
+        UIDynamicItemBehavior *behavior = [self behaviorForView:view];
+        CGPoint linearVelocityForCollision = [behavior linearVelocityForItem:view];
+        
+        // transfer this velocity to the other views
+        for (UIView* otherView in self.views) {
+            if (view != otherView) {
+                UIDynamicItemBehavior* itemBehavior = [self behaviorForView:otherView];
+                float bounceMagnitude = arc4random() % 50 + linearVelocityForCollision.y * 0.5;
+                [itemBehavior addLinearVelocity:CGPointMake(0, bounceMagnitude) forItem:otherView];
+            }
+        }
     }
 }
 
